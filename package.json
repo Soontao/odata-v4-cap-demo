@@ -3,17 +3,27 @@
   "version": "1.0.0",
   "license": "MIT",
   "dependencies": {
-    "@sap/cds": "^3",
+    "@sap/cds": "^5",
+    "cds-mysql": "^5.3.0",
+    "dotenv": "^10.0.0",
     "express": "^4",
-    "sqlite3": "^4.2.0"
+    "sqlite3": "^5"
   },
   "scripts": {
-    "start": "npx cds deploy && npx cds run"
+    "start": "npx cds run",
+    "deploy": "cds-mysql-deploy"
   },
   "cds": {
     "requires": {
       "db": {
-        "kind": "sqlite"
+        "kind": "mysql"
+      },
+      "mysql": {
+        "impl": "cds-mysql",
+        "models": [
+          "srv",
+          "db"
+        ]
       }
     }
   }

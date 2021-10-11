@@ -6,7 +6,10 @@
     {
       "type": "shell",
       "label": "cds watch",
-      "command": ["cds", "watch"],
+      "command": [
+        "cds",
+        "watch"
+      ],
       "group": {
         "kind": "build",
         "isDefault": true
@@ -16,7 +19,12 @@
     {
       "type": "shell",
       "label": "cds run",
-      "command": ["cds", "run", "--with-mocks", "--in-memory?"],
+      "command": [
+        "cds",
+        "run",
+        "--with-mocks",
+        "--in-memory?"
+      ],
       "problemMatcher": []
     }
   ]
