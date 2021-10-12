@@ -2,5 +2,6 @@
   "files.exclude": {
     "**/.git": true,
   },
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "WhiteSource Advise.BaseBranch": "master"
 }
