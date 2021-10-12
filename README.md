@@ -1,5 +1,7 @@
 # CAP Demo for `cds-mysql`
 
+[![node-test](https://github.com/Soontao/odata-v4-cap-demo/actions/workflows/nodejs.yml/badge.svg?branch=mysql)](https://github.com/Soontao/odata-v4-cap-demo/actions/workflows/nodejs.yml)
+
 ## Setup
 
 1. create a `.env` file for development, fill the database connection information
