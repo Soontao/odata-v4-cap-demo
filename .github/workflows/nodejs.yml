@@ -48,6 +48,7 @@ jobs:
         run: |
           npm i -g npm
           npm install
+          npm run deploy
           npm run test
         env:
           CI: true
