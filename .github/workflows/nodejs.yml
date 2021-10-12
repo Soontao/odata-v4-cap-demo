@@ -3,12 +3,10 @@ name: node-test
 on:
   push:
     branches:
-      - "*"
+      - "mysql"
   pull_request:
     branches:
-      - "*"
-  schedule:
-    - cron: "0 3 * * *"
+      - "mysql"
 
 jobs:
   build:
