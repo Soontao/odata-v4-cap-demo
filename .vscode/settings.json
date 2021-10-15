@@ -3,5 +3,8 @@
     "**/.git": true,
   },
   "editor.formatOnSave": true,
-  "WhiteSource Advise.BaseBranch": "master"
+  "cSpell.words": [
+    "cdstest",
+    "odata"
+  ]
 }

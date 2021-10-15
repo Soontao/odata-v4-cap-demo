@@ -11,12 +11,7 @@
 
 ## Environment
 
-* CDS_MYSQL_USER
-* CDS_MYSQL_PASSWORD
-* CDS_MYSQL_DATABASE
-* CDS_MYSQL_HOST
-* CDS_MYSQL_PORT
-
+> put database configuration in `environment`, for development, just use the `.env` file.
 
 `.env` file example
 

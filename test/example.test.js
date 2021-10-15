@@ -1,3 +1,4 @@
+require("dotenv").config()
 const cds = require('@sap/cds/lib');
 const cdstest = cds.test(__dirname + '/..')
 

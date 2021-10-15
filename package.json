@@ -1,12 +1,11 @@
 {
-  "name": "odata-v4-demo",
+  "name": "cap-demo",
   "version": "1.0.0",
-  "license": "MIT",
+  "private": "true",
   "dependencies": {
-    "@sap/cds": "^5",
-    "cds-mysql": "^5.4.1",
-    "express": "^4",
-    "sqlite3": "^5"
+    "@sap/cds": "~5.5.4",
+    "cds-mysql": "~5.4.2",
+    "express": "^4"
   },
   "scripts": {
     "start": "npx cds run",
@@ -23,7 +22,10 @@
         "models": [
           "srv",
           "db"
-        ]
+        ],
+        "auth": {
+          "impl": "srv/lib/auth.js"
+        }
       }
     }
   },
@@ -40,6 +42,7 @@
     "chai": "^4.3.4",
     "chai-as-promised": "^7.1.1",
     "chai-subset": "^1.6.0",
+    "dotenv": "^10.0.0",
     "jest": "^27.2.5"
   }
 }
