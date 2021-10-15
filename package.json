@@ -5,7 +5,6 @@
   "dependencies": {
     "@sap/cds": "^5",
     "cds-mysql": "^5.4.1",
-    "dotenv": "^10.0.0",
     "express": "^4",
     "sqlite3": "^5"
   },
