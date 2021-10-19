@@ -4,7 +4,7 @@
   "private": "true",
   "dependencies": {
     "@sap/cds": "~5.5.4",
-    "cds-mysql": "~5.4.2",
+    "cds-mysql": "~5.4.3",
     "express": "^4"
   },
   "scripts": {
