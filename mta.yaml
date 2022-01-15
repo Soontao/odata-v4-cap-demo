@@ -1,0 +1,51 @@
+## Generated mta.yaml based on template version 0.4.0
+## appName = cap-demo
+## language=nodejs; multitenant=false
+_schema-version: "3.1"
+ID: cap-demo
+version: 1.0.0
+description: "cap-demo"
+parameters:
+  enable-parallel-deployments: true
+
+build-parameters:
+  before-all:
+    - builder: custom
+      commands:
+        - npm install
+        - npx -p @sap/cds-dk cds build --production
+
+modules:
+  # --------------------- SERVER MODULE ------------------------
+  - name: cap-demo-srv
+    # ------------------------------------------------------------
+    type: nodejs
+    path: gen/srv
+    parameters:
+      buildpack: nodejs_buildpack
+      tasks:
+        - name: deploy db
+          command: npm run deploy
+    requires:
+      - name: remote-mysql-service # change this name if the user-provided service has another key
+      # - name: cap-demo-db-deployment
+
+  # - name: cap-demo-db-deployment
+  #   type: nodejs
+  #   path: gen/srv
+  #   parameters:
+  #     buildpack: nodejs_buildpack
+  #     no-route: true
+  #     health-check-type: none
+  #     success-marker: successful
+  #     failure-marker: failed
+  #     execute-app: true
+  #     check-deploy-id: true
+  #     dependency-type: hard
+  #     command: npm run deploy
+  #   requires:
+  #     - name: remote-mysql-service # change this name if the user-provided service has another key
+
+resources:
+  - name: remote-mysql-service
+    type: org.cloudfoundry.user-provided-service
