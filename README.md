@@ -52,7 +52,7 @@ CDS_MYSQL_PASSWORD=cdstest
 CDS_MYSQL_DATABASE=cdstest
 CDS_MYSQL_HOST=mysql
 CDS_MYSQL_PORT=3306
-CDS_MYSQL_SSL_CA="DOUBLE QUOTED PEM CERT TEXT"
+CDS_MYSQL_SSL_CA="-----BEGIN CERTIFICATE-----\n ... \n-----END CERTIFICATE-----\n
 ```
 
 in cloud environment, just set the `environment variable` as local is ok (like `k8s`)
