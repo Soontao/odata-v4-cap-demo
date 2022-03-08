@@ -7,8 +7,8 @@
     "npm": "8"
   },
   "dependencies": {
-    "@sap/cds": "^5.7.5",
-    "cds-mysql": "^5.9.6-alpha.0",
+    "@sap/cds": "^5.8.3",
+    "cds-mysql": "^5.9.7-alpha.0",
     "express": "^4"
   },
   "scripts": {
@@ -26,10 +26,7 @@
         "models": [
           "srv",
           "db"
-        ],
-        "auth": {
-          "impl": "srv/lib/auth.js"
-        }
+        ]
       }
     }
   },
@@ -43,6 +40,7 @@
   "devDependencies": {
     "@types/jest": "^27.0.2",
     "axios": "^0.22.0",
+    "cds-jest": "^0.0.4",
     "chai": "^4.3.4",
     "chai-as-promised": "^7.1.1",
     "chai-subset": "^1.6.0",
