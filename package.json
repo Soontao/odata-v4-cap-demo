@@ -8,12 +8,18 @@
     "sqlite3": "^5"
   },
   "scripts": {
-    "start": "npx cds deploy && npx cds run"
+    "start": "cds deploy --to sqlite && cds run"
+  },
+  "devDependencies": {
+    "@sap/cds-dk": "^4.8.2"
   },
   "cds": {
     "requires": {
       "db": {
-        "kind": "sqlite"
+        "kind": "sqlite",
+        "credentials": {
+          "database": "sqlite.db"
+        }
       }
     }
   }
