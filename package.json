@@ -7,9 +7,9 @@
     "npm": "8"
   },
   "dependencies": {
-    "@sap/cds": "^5.8.3",
-    "cds-mysql": "^5.9.7-alpha.0",
-    "express": "^4"
+    "@sap/cds": "^5.9.2",
+    "cds-mysql": "^5.9.9-alpha.0",
+    "express": "^4.17.3"
   },
   "scripts": {
     "start": "npx cds run",
@@ -22,11 +22,7 @@
         "kind": "mysql"
       },
       "mysql": {
-        "impl": "cds-mysql",
-        "models": [
-          "srv",
-          "db"
-        ]
+        "impl": "cds-mysql"
       }
     }
   },
@@ -38,13 +34,13 @@
     ]
   },
   "devDependencies": {
-    "@types/jest": "^27.0.2",
+    "@types/jest": "^27.4.1",
     "axios": "^0.22.0",
-    "cds-jest": "^0.0.4",
-    "chai": "^4.3.4",
+    "cds-jest": "^0.0.6",
+    "chai": "^4.3.6",
     "chai-as-promised": "^7.1.1",
     "chai-subset": "^1.6.0",
     "dotenv": "^10.0.0",
-    "jest": "^27.2.5"
+    "jest": "^27.5.1"
   }
 }

@@ -3,6 +3,7 @@ using {
   managed
 } from '@sap/cds/common';
 
+using {incrementID} from 'cds-mysql';
 
 type PeopleName : {
   FirstName  : String(255);
@@ -12,7 +13,7 @@ type PeopleName : {
 }
 
 
-entity People : cuid, managed {
+entity People : incrementID, managed {
 
   @assert.unique
   UserName : String(128);
@@ -23,6 +24,6 @@ entity People : cuid, managed {
 }
 
 
-entity Detail : cuid {
+entity Detail : incrementID {
   people : Association to one People;
 }
