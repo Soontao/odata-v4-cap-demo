@@ -22,7 +22,7 @@
         "tenant": {
           "deploy": {
             "eager": [
-              "tenant_default"
+              "default"
             ]
           }
         }
@@ -38,6 +38,9 @@
     "testMatch": [
       "**/*.test.js"
     ]
+  },
+  "optionalDependencies": {
+    "fsevents": "*"
   },
   "devDependencies": {
     "@types/jest": "^27.4.1",
