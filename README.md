@@ -12,7 +12,6 @@
 ## Development
 
 1. create a `default-env.json` file for development, fill the database connection information
-2. execute `npm run deploy` to deploy the database schema to database
 3. execute `npm start` to start the server
 4. execute `npm run test` to perform unit test
 
@@ -43,7 +42,7 @@ awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' cert-name.pem
 
 ### by default-env.json (local development only)
 
-put a `default-env.json` file into the project root
+put a `default-env.json` file into the project root, for options of `credentials`, just ref [mysql npm package document](https://www.npmjs.com/package/mysql#connection-options)
 
 ```json
 {
@@ -60,10 +59,7 @@ put a `default-env.json` file into the project root
           "user": "cds-user",
           "password": "CdsUser123$",
           "database": "cds-user",
-          "port": 3306,
-          "ssl": {
-            "ca": "-----BEGIN CERTIFICATE-----\n ... ... \n-----END CERTIFICATE-----\n"
-          }
+          "port": 3306
         }
       }
     ]

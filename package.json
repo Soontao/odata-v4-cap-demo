@@ -7,19 +7,25 @@
     "npm": "8"
   },
   "dependencies": {
-    "@sap/cds": "^5.9.2",
-    "cds-mysql": "^5.9.9-alpha.0",
-    "express": "^4.17.3"
+    "@sap/cds": "^5.9.7",
+    "cds-mysql": "^5.9.12",
+    "express": "^4.18.1"
   },
   "scripts": {
-    "start": "npx cds run",
-    "deploy": "cds-mysql-deploy",
+    "start": "cds run",
     "test": "jest --silent --forceExit"
   },
   "cds": {
     "requires": {
       "db": {
-        "kind": "mysql"
+        "kind": "mysql",
+        "tenant": {
+          "deploy": {
+            "eager": [
+              "tenant_default"
+            ]
+          }
+        }
       },
       "mysql": {
         "impl": "cds-mysql"
