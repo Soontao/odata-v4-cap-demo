@@ -19,3 +19,11 @@ entity People : cuid, managed {
   Name     : PeopleName;
 
 }
+
+
+entity Order : cuid {
+  Title    : String(255);
+  Amount   : Decimal;
+  Currency : String(3);
+  Weight   : Decimal;
+}
